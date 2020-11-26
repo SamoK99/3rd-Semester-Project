@@ -1,0 +1,141 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+.navbar-dark .navbar-nav .nav-link {
+    color: map-get($theme-colors , secondary );
+}
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: map-get($theme-colors , highlight-text );
+}
+h1{
+    color: map-get($theme-colors , secondary );
+}
+p{
+    color: map-get($theme-colors , text );
+}
+
+$xl:1440px;
+$lg:992px;
+$md:768px;
+$sm:576px;
+
+body{
+    background-image: linear-gradient(to bottom right, black 0%, #434343 100%,);
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+}
+// HEADER
+    .logo_holder{
+        height: 185px;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #main-nav{
+        position: sticky;
+        top: 0;
+        background: rgba(14, 13, 13, 0.432);
+        ul{
+            flex: 1;
+            justify-content: space-evenly;
+            li{
+                a{
+                    font-weight: 600;
+                }
+                &.current_page_item{
+                    a{
+                        color: map-get($theme-colors , highlight-text );
+                    }
+                }
+            }
+            
+        }
+    }
+    .container{
+        @media(max-width:$lg){
+        margin: 0; 
+        }
+    }
+
+    .navbar-dark .navbar-toggler{
+        border-color: transparent;
+        
+    }
+// HEADER - END
+
+// HOME
+.home{
+    height: auto;
+    .news_holder{
+        height: 400px;
+        background: rgba(56, 55, 55, 0.651);
+        display: flex;
+        @media(max-width:$lg){
+            height: 700px;
+            flex-direction: column;
+        }
+        @media(max-width:$md){
+            height: 650px;
+        }
+        @media(max-width:$sm){
+            height: 600px;
+        }
+        .news_text{
+            width: 50%;
+            p{
+                width: 80%;
+                margin: 0 auto;
+            }
+            @media(max-width:$lg){
+                width: 100%;
+            }
+        }
+        .news_img{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media(max-width:$lg){
+                width: 100%;
+            }
+            .img{
+                width: 90%;
+                height: 90%;
+                border-radius: 20px;
+                background-image: url(../img/placeholder.jpg);
+                background-size: 100% 100%;
+            }
+        }
+    }
+
+    .video_holder{
+        height: 750px;
+        @media(max-width:$lg){
+            height: 500px;
+        }
+        @media(max-width:$md){
+            height: 350px;
+        }
+        @media(max-width:$sm){
+            height: 300px;
+        }
+        .video{
+            height: 80%;
+            width: 80%;
+            background-color: black;
+            margin: 0 auto;
+        }
+    }
+}
+
+// HOME - END
+
+
+#wrapper-footer{
+    height: 100px;
+    background-color: rgba(255, 192, 203, 0.397);
+    margin-top: 100px;
+}
